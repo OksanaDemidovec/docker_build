@@ -36,8 +36,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-            
+          tags: ${{ steps.meta.outputs.tags }}            
       - name: Slack SUCCESS Notification
         uses: rtCamp/action-slack-notify@v2
         if: success()
